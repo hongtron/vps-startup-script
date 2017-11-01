@@ -1,0 +1,17 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - git
+  - curl
+  - mosh
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh9ffyGAVGGPub7nqBHe3yHNryfwPqkj3mxfCOOljcUvDZvY45hu/fCwStOw/DrcgCD9OKgSkqca6MzTK11vc4uVK5qJDo879XlRfYRzePXeK0bUvUG7QZPiKrXqvTe+u6IwHPfZ/rJcIURWH7ZThJb9yWnMdsRQzcK7h6UIvEEy8m1QLwKndW+TAT42+EDKBhj2KZUON+Y9JBt2SjVs/LfGu7oOqhJA2L0CYkrMtX9ENcjgXZr+K64HZQBLAGFPyu3a/h/soO/xito35wuZKZkrvVW8ZsD01fR8I8bBQGkPkcQi5BzXSv+rjOKQfZ5ZZTxovWoQMlJsqOVx4eByCD ali@Alis-MacBook-Pro.local
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDo/fla/NNBT+fNYIF0lg4aqZfn7wdH3Y8qVRIN+hlgU0LyOacDC/15VuvDtkaITRr1Em6VQ93x5fIyis0LnXJFik8Yh9tQomo7f1NO8yJp8BuJhIMLVtun1WG40qMw8EOA3ee8w6jmUJxlcDuTKXKlofROeOHC4rusMNhMRFJRCegnqQ0a9WJwq2zqih0cBsC/8w3k3uYV97G5MEV6DP14Do8EqeQFgeFeu9rg1N5l587PgzS9U9EEILnoj0BsS1gNdgmPLCqD0ydmXwJqX2pUCQmwQB/33Mk1KFIjS7TCMGu5yqnt+j0CC1EyypKpF6sfKYEBsSdTmO7PU3bga9Fx alhong@LM-CHI-21020828
+write_files:
+  - path: /home/root/.ssh/known_hosts
+    content: |
+      |1|/etcFyyFnQA1kQ9z7mk0+7uHpNo=|Dw2HmMgVZN7mivluBA3YHrdOB1w= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+      |1|Jla1ha2QzPlgGBUhyu072R/9H/U=|29YVTmgwsiofGLobWQUh7ASc1+M= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+runcmd:
+  - git clone https://github.com/hongtron/dotfiles.git /tmp/dotfiles && /tmp/dotfiles/vpc_install.sh
+  - docker pull hongtron/dev-env

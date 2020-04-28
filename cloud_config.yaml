@@ -3,9 +3,13 @@ package_upgrade: true
 packages:
   - git
   - curl
+  - wget
   - mosh
   - gcc
   - make
+  - tmux
+  - vim
+  - jq
 ssh_authorized_keys:
   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh9ffyGAVGGPub7nqBHe3yHNryfwPqkj3mxfCOOljcUvDZvY45hu/fCwStOw/DrcgCD9OKgSkqca6MzTK11vc4uVK5qJDo879XlRfYRzePXeK0bUvUG7QZPiKrXqvTe+u6IwHPfZ/rJcIURWH7ZThJb9yWnMdsRQzcK7h6UIvEEy8m1QLwKndW+TAT42+EDKBhj2KZUON+Y9JBt2SjVs/LfGu7oOqhJA2L0CYkrMtX9ENcjgXZr+K64HZQBLAGFPyu3a/h/soO/xito35wuZKZkrvVW8ZsD01fR8I8bBQGkPkcQi5BzXSv+rjOKQfZ5ZZTxovWoQMlJsqOVx4eByCD ali@Alis-MacBook-Pro.local
   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDo/fla/NNBT+fNYIF0lg4aqZfn7wdH3Y8qVRIN+hlgU0LyOacDC/15VuvDtkaITRr1Em6VQ93x5fIyis0LnXJFik8Yh9tQomo7f1NO8yJp8BuJhIMLVtun1WG40qMw8EOA3ee8w6jmUJxlcDuTKXKlofROeOHC4rusMNhMRFJRCegnqQ0a9WJwq2zqih0cBsC/8w3k3uYV97G5MEV6DP14Do8EqeQFgeFeu9rg1N5l587PgzS9U9EEILnoj0BsS1gNdgmPLCqD0ydmXwJqX2pUCQmwQB/33Mk1KFIjS7TCMGu5yqnt+j0CC1EyypKpF6sfKYEBsSdTmO7PU3bga9Fx alhong@LM-CHI-21020828
